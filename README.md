@@ -1,4 +1,5 @@
 # nodejs-app-divam
+```
 Step-1:- cloning the git into my local machine this process i entered the user and password detail to access this because it's a private repository. In this i got a application code which is written in nodejs language. where the dependencies were installed regardings the application.
 ERROR:- in this process i facing a problem when i go to the vs code and clone to the repository it's not start clone but when i go in my terminal and start clone it's started and i get the code.
 step-2:- i went to the directory where the code was store in this i create a copy of .env.example file to .env and enter this file and change the nodejs port to 5555.
@@ -17,3 +18,4 @@ step-4:- after this i setup the mysql root user password and cofigure the path o
 step-5:- go to the directory where stored the nodejs code and run it.
    npm i
    npm run dev 
+```
