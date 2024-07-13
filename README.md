@@ -13,9 +13,16 @@ step-3:- after this i installed require dependencies for nodejs application mysq
 ERROR:- after setup of nodejs and npm they are not shown in my directory after some searches i found the location was not define in path so i add this in path variables.
    for search the path of npm =  whereis npm
    then add into the path using = export PATH=$PATH:/usr/share/npm ### after this command " source ~/.bashrc " run.
+
 step-4:- after this i setup the mysql root user password and cofigure the path of nodejs application directory to nginx configuration.
 
 step-5:- go to the directory where stored the nodejs code and run it.
    npm i
-   npm run dev 
+   npm run dev
+step-4:- for auto start server i add a pm2 process.
+    sudo npm install -g pm2
+    sudo pm2 start npm --name "website domain name" --run start
+    sudo pm2 save
+   for checking logs
+      sudo pm2 logs 0 
 ```
