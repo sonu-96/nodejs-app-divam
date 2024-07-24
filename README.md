@@ -21,7 +21,7 @@ step-5:- go to the directory where stored the nodejs code and run it.
    npm run dev
 step-4:- for auto start server i add a pm2 process.
     sudo npm install -g pm2
-    sudo pm2 start npm --name "website domain name" --run start
+    sudo pm2 start npm --name "website domain name" -- start
     sudo pm2 save
    for checking logs
       sudo pm2 logs 0 
