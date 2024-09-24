@@ -1,0 +1,30 @@
+first i create a machine ubuntu22.04. # go to aws lightsail account and the go to instance and click create instance and choose os as ubuntu22.04 then given a name to my machine then create.
+then i update the machine. # sudo apt update
+generate ssh key in machine to authenticate with github account. # ssh-keygen -t rsa -b 4096.
+then i add my machine ssh key to github account to ssh the repository to my local machine. # go to the github account and then go to the setting section and in this click ssh and gpg keys option and go to new ssh key tab click on it and add my local machine public key.
+the clone all the repository which is i want to use. git clone < rep ssh url >.
+one code is situated on another machine so i need to copy that code to my machine # in this i generate ssh key on old machine and it's publick key to store on new machine authorized key section.
+then i use scp commnad to move folder old machine to new machine. # scp -r /path/to/local/folder username@remote_host:/path/to/destination
+after moving all the code i install nginx web server and node (using nvm manager) and php-fpm for php website and also all php dependencies.
+# sudo apt install nginx -y
+# sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash # after this restart machine
+# sudo nvm install 18 # for install node with version 18
+# sudo apt install php 
+# sudo apt install php-cli php-fpm php-mysql php-xml php-mbstring php-curl php-zip php-intl php-json
+# sudo systemctl status php8.1-fpm # for checking status if not running then start it # sudo systemctl start php8.1-fpm.
+now move to html and php website to /var/www/html/your-websites.
+then give the permission and ownership to all website.
+# sudo chown -R www-data:www-data you-websites-folder
+# sudo chmod -R 755 your-websites-folder
+create all website configuration. # /etc/nginx/sites-available/
+dbs.divamtech- 2000
+divamtech-3000
+newton on mars - 4000
+govinddevjipackaging - 5000
+your-webhook-server - 6000
+gauravds.com- 80
+papertubesworld - 7000
+erp.govinddevjipackaging - 8000
+erp.papertubesworld- 9000
+link all the configuration in sites-enabled # sudo ln -s /etc/nginx/sites-available/your-website-conf /etc/nginx/sites-enabled
+
